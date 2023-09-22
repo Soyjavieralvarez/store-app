@@ -37,7 +37,6 @@ const ProductPage: React.FC <ProductPageProps> = async ({
                     <ProductList title="Productos relacionados" items={suggestedProducts} />
                 </div>
             </Container>
-            Individual Product
         </div>
      );
 }
