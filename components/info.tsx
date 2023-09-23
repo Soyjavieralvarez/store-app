@@ -27,6 +27,11 @@ const Info: React.FC <InfoProps> = ({
             <h3 className="font-semibold text-slate-600">Talla: {data?.size?.name}</h3>
         </div>
     </div>
+    
+    <div className="flex items-center gap-x-4 justify-center pt-2">
+          <h3 className="font-semibold text-slate-600">Color:</h3>
+          <div className="h-6 w-6 rounded-full border border-gray-600" style={{ backgroundColor: data?.color?.value }} />
+        </div>
     <div className="w-full h-full relative flex justify-center p-10 ">
             <Button className="flex items-center gap-x-2 bg-black hover:bg-[#03cc99] transition-background duration-300">
                 Comprar

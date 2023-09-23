@@ -2,7 +2,7 @@ import getProduct from "@/actions/get-product";
 import getProducts from "@/actions/get-products";
 import ProductList from "@/components/product-list";
 import Container from "@/components/ui/container";
-import Gallery from "@/components/ui/gallery/index";
+import Gallery from "@/components/gallery/index";
 import Info from "@/components/info";
 
 
