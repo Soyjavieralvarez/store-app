@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar"
 import ModalProvider from '@/providers/modal-provider'
 
 import './globals.css'
+import ToastProvider from '@/providers/toast-provider'
 
 
 
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ModalProvider />
+        <ToastProvider />
         <Navbar />
         {children}
         <Footer />
