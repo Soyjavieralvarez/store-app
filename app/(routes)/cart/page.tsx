@@ -17,7 +17,7 @@ const CartPage = () => {
                     <h1 className='text-3xl font-bold text-slate-900 text-center'> Cesta </h1>
                     <div className='mt-12 lg:grid-cols-12 lg:items-center gap-x-12 '>
                         <div className='lg:col-span-7'>
-                            { cart.items.length === 0 && <p className='text-slate-900 text-center underline underline-offset-8'>Tu cesta está vacía</p> }
+                            { cart.items.length === 0 && <p className='text-slate-900 text-center pb-8'>Tu cesta está vacía</p> }
                             <ul>
                                 {cart.items.map((item) => (
                                     <CartItem
