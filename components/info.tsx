@@ -4,6 +4,7 @@ import { Product } from "@/types"
 import Currency from "@/components/ui/currency";
 import Button from "@/components/ui/button";
 import { ShoppingCart } from "lucide-react"
+import useCart from "@/hooks/use-cart";
 
 interface InfoProps {
     data: Product;
@@ -12,6 +13,12 @@ interface InfoProps {
 const Info: React.FC <InfoProps> = ({
     data
 }) => {
+
+    const cart = useCart();
+
+    const onAddTocart = () => {
+        cart.addItem(data);
+    }
   return (
     <>
     <div className="flex flex-col justify-center text-center">
@@ -33,7 +40,7 @@ const Info: React.FC <InfoProps> = ({
           <div className="h-6 w-6 rounded-full border border-gray-600" style={{ backgroundColor: data?.color?.value }} />
         </div>
     <div className="w-full h-full relative flex justify-center p-10 ">
-            <Button className="flex items-center gap-x-2 bg-black hover:bg-[#03cc99] transition-background duration-300">
+            <Button onClick={onAddTocart} className="flex items-center gap-x-2 bg-black hover:bg-[#03cc99] transition-background duration-300">
                 Comprar
                 <ShoppingCart />
             </Button>
