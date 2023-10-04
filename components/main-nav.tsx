@@ -27,7 +27,7 @@ const MainNav: React.FC<MainNavProps> = ({
 
     return (
       <>
-        {/* Botón de menú para dispositivos móviles */}
+        
         <button
           className="lg:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -36,7 +36,7 @@ const MainNav: React.FC<MainNavProps> = ({
           ☰
         </button>
   
-        {/* Menú para dispositivos móviles */}
+       
         {menuOpen && (
           <nav className="lg:hidden">
             {routes.map((route) => (
@@ -54,7 +54,7 @@ const MainNav: React.FC<MainNavProps> = ({
           </nav>
         )}
   
-        {/* Menú para ordenadores */}
+       
         <nav className="hidden m-6 lg:flex items-center space-x-4 lg:space-x-6">
           {routes.map((route) => (
             <Link
